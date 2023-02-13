@@ -4,7 +4,7 @@ WORKDIR /
 RUN export DISPLAY=:0
 
 RUN python3 -m pip install --upgrade pip \
-&&  pip install --no-cache-dir \
+    &&  pip install --no-cache-dir \
     flake8 \
     jupyterlab \
     jupyterlab_flake8
@@ -16,6 +16,7 @@ RUN pip install --no-cache-dir \
     japanize_matplotlib \
     seaborn \
     jquants-api-client \
+    scikit-learn \
     plotly
 
 RUN mkdir workspace
