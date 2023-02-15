@@ -19,6 +19,11 @@ RUN pip install --no-cache-dir \
     scikit-learn \
     plotly
 
+RUN pip install --no-cache-dir \
+    xgboost \
+    shap \
+    tqdm
+
 RUN mkdir workspace
 
 ENTRYPOINT ["jupyter-lab","--allow-root","--ip=0.0.0.0","--port=8888","--no-browser","--NotebookApp.token=''","--notebook-dir=/workspace"]
