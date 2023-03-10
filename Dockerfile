@@ -22,7 +22,8 @@ RUN pip install --no-cache-dir \
 RUN pip install --no-cache-dir \
     xgboost \
     shap \
-    tqdm
+    tqdm \
+    statsmodels
 
 RUN mkdir workspace
 
