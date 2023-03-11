@@ -1,11 +1,16 @@
 FROM python:3.9-bullseye
 
+RUN apt update && apt install -y --no-install-recommends g++ gcc \
+    && apt-get -y clean \
+    && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /
 RUN export DISPLAY=:0
 
 RUN python3 -m pip install --upgrade pip \
     &&  pip install --no-cache-dir \
     flake8 \
+    black \
     jupyterlab \
     jupyterlab_flake8
 
