@@ -12,6 +12,7 @@ RUN python3 -m pip install --upgrade pip \
     flake8 \
     black \
     jupyterlab \
+    ipywidgets \
     jupyterlab_flake8
 
 RUN pip install --no-cache-dir \
