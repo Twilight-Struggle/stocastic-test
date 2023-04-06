@@ -16,6 +16,7 @@ RUN python3 -m pip install --upgrade pip \
     jupyterlab_flake8
 
 RUN pip install --no-cache-dir \
+    tensorflow \
     numpy \
     pandas \
     matplotlib \
